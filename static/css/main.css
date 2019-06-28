@@ -1,0 +1,101 @@
+html,
+body {
+  height: 100%;
+  color: #212121;
+  font-family: "Roboto Slab", serif;
+}
+body {
+  margin: 1em 15%;
+}
+code,
+pre,
+kbd {
+  font-family: "Roboto Mono", monospace;
+  font-size: 10pt;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: lighter;
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.8em;
+  color: #444;
+}
+h3 {
+  font-size: 1.6em;
+  color: #555;
+}
+h4,
+h5,
+h6 {
+  font-size: 1.4em;
+  color: #666;
+}
+footer {
+  bottom: 0;
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  height: 60px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+article {
+  color: #4c4c4c;
+}
+article h1,
+article h2,
+article h3,
+article h4,
+article h5 {
+  margin: 0.25em 0;
+  font-weight: lighter;
+  font-size: inherit;
+}
+article h1 {
+  font-size: 1.7em;
+  color: #333;
+}
+article h2 {
+  font-size: 1.4em;
+  color: #444;
+}
+article h3 {
+  font-size: 1.1em;
+  color: #666;
+}
+article h4 {
+  font-size: 1em;
+  color: #666;
+}
+article h5,
+article h6 {
+  color: #666;
+}
+.list-item .sub {
+  padding: 0;
+  margin: 0;
+  color: #666;
+}
+.idfc div {
+  padding-top: 25%;
+}
+.idfc div h1,
+.idfc div h2,
+.idfc div p {
+  text-align: center;
+}

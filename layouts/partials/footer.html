@@ -1,0 +1,13 @@
+<footer>
+  {{ if .Site.Menus.main }}
+  <div>
+    <p>I do write
+      {{ range $index, $element := .Site.Menus.main }}
+      {{if $index}} and {{end}}<a href="{{ $element.URL }}">{{ $element.Name }}</a>{{end}}.
+    </p>
+  </div>
+  {{ end }}
+</footer>
+</body>
+
+</html>

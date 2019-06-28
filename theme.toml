@@ -1,0 +1,11 @@
+name = "I Don't Theme Websites"
+license = "MIT"
+licenselink = "https://github.com/cfunkhouser/idontthemewebsites/blob/master/LICENSE.md"
+description = "Hugo Theme for idontfixcomputers.com"
+homepage = "http://github.com/cfunkhouser/idontthemewebsites/"
+tags = ["blog", "minimal", "personal", "idontfixcomputers"]
+min_version = "0.55.0"
+
+[author]
+  name = "Christian Funkhouser"
+  homepage = "http://www.idontfixcomputers.com/"

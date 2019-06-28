@@ -1,0 +1,12 @@
+<section class="list-item">
+  {{ .Date.Format (.Site.Params.dateFormat | default "2006-01-02") | $.Scratch.Set "date" }}
+  {{ with .Description }} {{ $.Scratch.Set "subtitle" . }} {{ end }}
+  <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+  <p class="sub">{{ $.Scratch.Get "subtitle" }} Published {{ $.Scratch.Get "date" }}</p>
+  <p class="sub">
+    {{ range .Params.tags }}
+    <kbd><a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">{{ . }}</a></kbd>
+    {{ end }}
+  </p>
+  {{/* TODO(cfunkhouser): Related. */}}
+</section>

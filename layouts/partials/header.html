@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ .Title }}</title>
+    {{ if .Site.Params.favicon }}
+    <link rel="icon" href="{{ .Site.Params.favicon | absURL }}">
+    {{ end }}
+    {{ partial "css" . }}
+    {{ partial "js" . }}
+    {{ hugo.Generator }}
+
+    {{ with .OutputFormats.Get "RSS" }}
+    <link href="{{ .RelPermalink }}" rel="alternate" type="{{ .MediaType.Type }}" title="{{ $.Site.Title }}" />
+    <link href="{{ .RelPermalink }}" rel="feed" type="{{ .MediaType.Type }}" title="{{ $.Site.Title }}" />
+    {{ end }}
+
+    {{ if .Site.GoogleAnalytics }}
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments) };
+        gtag('js', new Date());
+        gtag('config', '{{ .Site.GoogleAnalytics }}');
+    </script>
+    {{ end }}
+
+</head>
+
+<body>
