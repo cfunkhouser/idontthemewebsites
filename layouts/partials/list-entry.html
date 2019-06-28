@@ -4,8 +4,9 @@
   <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
   <p class="sub">{{ $.Scratch.Get "subtitle" }} Published {{ $.Scratch.Get "date" }}</p>
   <p class="sub">
-    {{ range .Params.tags }}
+    {{ range $index, $tag := .Params.tags }}
     <kbd><a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">{{ . }}</a></kbd>
+    {{ if $index }} : {{ end }}
     {{ end }}
   </p>
   {{/* TODO(cfunkhouser): Related. */}}
