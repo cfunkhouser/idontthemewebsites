@@ -5,8 +5,8 @@
   <p class="sub">{{ $.Scratch.Get "subtitle" }} Published {{ $.Scratch.Get "date" }}</p>
   <p class="sub">
     {{ range $index, $tag := .Params.tags }}
-    <kbd><a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">{{ . }}</a></kbd>
     {{ if $index }} : {{ end }}
+    <kbd><a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">{{ . }}</a></kbd>
     {{ end }}
   </p>
   {{/* TODO(cfunkhouser): Related. */}}
