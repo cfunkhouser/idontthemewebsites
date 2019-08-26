@@ -2,7 +2,7 @@
   {{ .Date.Format (.Site.Params.dateFormat | default "2006-01-02") | $.Scratch.Set "date" }}
   {{ with .Description }} {{ $.Scratch.Set "subtitle" . }} {{ end }}
   <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
-  <p class="sub">{{ $.Scratch.Get "subtitle" }} Published {{ $.Scratch.Get "date" }}</p>
+  <p class="sub">{{ $.Scratch.Get "subtitle" }} Published on {{ $.Scratch.Get "date" }}</p>
   <p class="sub">
     {{ range $index, $tag := .Params.tags }}
     {{ if $index }} : {{ end }}

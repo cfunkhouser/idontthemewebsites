@@ -2,9 +2,10 @@
   {{ if .Site.Menus.main }}
   <div>
     <p>{{ if .Site.Params.whoami }}I am {{ .Site.Params.whoami }}. {{ end }}
-      I do write
+      I do
       {{ range $index, $element := .Site.Menus.main }}
-      {{if $index}} and {{end}}<a href="{{ $element.URL }}">{{ $element.Name }}</a>{{end}}.
+      {{ if $index }} and {{ end }}
+      <a href="{{ $element.URL }}">{{ $element.Name }}</a>{{ end }}.
     </p>
   </div>
   {{ end }}
