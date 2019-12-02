@@ -3,6 +3,10 @@
 
 <head>
     <meta charset="utf-8">
+    <meta property="og:site_name" content="I Don't Fix Computers." />
+    <meta property="og:url" content="{{ .Permlink }}" />
+    <meta property="og:title" content="{{ .Title }}" />
+    <meta property="og:description" content="{{ .Description }}" />
     <title>{{ .Title }}</title>
     {{ if .Site.Params.favicon }}
     <link rel="icon" href="{{ .Site.Params.favicon | absURL }}">
