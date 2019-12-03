@@ -1,3 +1,6 @@
+{{ $desc := .Description }}
+{{ if .IsHome }}{{ $desc = .Site.Description }}{{ end }}
+
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
 
@@ -6,7 +9,7 @@
     <meta property="og:site_name" content="I Don't Fix Computers." />
     <meta property="og:url" content="{{ .Permalink }}" />
     <meta property="og:title" content="{{ .Title }}" />
-    <meta property="og:description" content="{{ .Description }}" />
+    <meta property="og:description" content="{{ $desc }}" />
     <title>{{ .Title }}</title>
     {{ if .Site.Params.favicon }}
     <link rel="icon" href="{{ .Site.Params.favicon | absURL }}">
