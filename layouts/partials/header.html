@@ -1,5 +1,5 @@
 {{ $desc := .Description }}
-{{ if .IsHome }}{{ $desc = .Site.Description }}{{ end }}
+{{ if .IsHome }}{{ $desc = .Site.Params.Description }}{{ end }}
 
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
