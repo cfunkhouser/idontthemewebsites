@@ -2,9 +2,6 @@
 <main class="idfc">
     <div>
         <h1>{{ .Site.Title }}</h1>
-        {{ if .Site.Params.Description }}
-        <h2>{{ .Site.Params.Description | markdownify }}</h2>
-        {{ end }}
     </div>
 </main>
 {{ partial "footer" . }}
