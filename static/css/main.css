@@ -53,9 +53,13 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
 article {
   color: #4c4c4c;
+  padding-bottom: 65px;
+}
+article a {
+  color: inherit;
+  text-decoration: underline;
 }
 article h1,
 article h2,
