@@ -1,105 +1,204 @@
 html,
 body {
-  height: 100%;
   color: #212121;
   font-family: "Roboto Slab", serif;
+  background-color: #fff;
+  text-rendering: geometricPrecision;
 }
-body {
-  margin: 1em 15%;
-}
+
 code,
 pre,
 kbd {
   font-family: "Roboto Mono", monospace;
-  font-size: 10pt;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: lighter;
+
+pre {
+  padding: 1em;
 }
-h1 {
-  font-size: 2em;
+
+@media screen {
+  body {
+    margin: 0 25%;
+  }
+
+  header {
+    margin: 2em 0;
+  }
+
+  section {
+    margin-top: 2em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin: 0.25em 0;
+    font-weight: lighter;
+    font-size: inherit;
+  }
 }
-h2 {
-  font-size: 1.8em;
-  color: #444;
+
+@media print {
+  body {
+    margin: 0;
+  }
+
+  header {
+    margin: 0.75em 0;
+  }
+
+  section {
+    margin-top: 0.5em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin: 0;
+    font-weight: lighter;
+    font-size: inherit;
+  }
+
+  p {
+    margin: 0;
+  }
 }
-h3 {
-  font-size: 1.6em;
-  color: #555;
-}
-h4,
-h5,
-h6 {
-  font-size: 1.4em;
-  color: #666;
-}
-footer {
-  bottom: 0;
-  position: fixed;
-  background: #fff;
-  width: 100%;
-  height: 60px;
-}
+
 a {
   color: inherit;
   text-decoration: none;
 }
+
 a:hover {
-  text-decoration: underline;
-}
-article {
-  color: #4c4c4c;
-  padding-bottom: 65px;
-}
-article a {
   color: inherit;
   text-decoration: underline;
 }
-article h1,
-article h2,
-article h3,
-article h4,
-article h5 {
-  margin: 0.25em 0;
-  font-weight: lighter;
-  font-size: inherit;
+
+main {
+  color: #4c4c4c;
 }
-article h1 {
-  font-size: 1.7em;
+
+h1 {
+  font-size: 2.5em;
   color: #333;
 }
-article h2 {
-  font-size: 1.4em;
+
+h2,
+h1 + .subheading {
+  font-size: 1.8em;
+  color: #333;
+}
+
+h3,
+h2 + .subheading {
+  font-size: 1.6em;
   color: #444;
 }
-article h3 {
-  font-size: 1.1em;
+
+h4,
+h3 + .subheading {
+  font-size: 1.2em;
   color: #666;
 }
-article h4 {
-  font-size: 1em;
+
+h5,
+h6,
+h4 + .subheading {
   color: #666;
 }
-article h5,
-article h6 {
+
+header .subheading {
+  font-size: 1.2em;
   color: #666;
 }
-.sub {
-  padding: 0;
-  margin: 0;
+
+main p {
+  text-indent: 2em;
+}
+
+footer {
+  border-top: 1px solid #ccc;
   color: #666;
+  padding: 2em;
+  margin-top: 2.25em;
 }
-.idfc div {
-  padding-top: 25%;
-}
-.idfc div h1,
-.idfc div h2,
-.idfc div p {
+
+footer div {
   text-align: center;
+}
+
+div.header-with-subheading {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+div.header-with-subheading .subheading {
+  flex-grow: 1;
+  text-align: right;
+}
+
+svg {
+  padding: 0 0.25em;
+}
+
+.header-with-icon svg {
+  align-self: center;
+}
+
+.idfc {
+  padding-top: 25%;
+  display: flex;
+  justify-content: center;
+}
+
+.idfc div {
+  width: fit-content;
+}
+
+.list article {
+  padding-bottom: 1em;
+}
+
+.list p {
+  text-indent: 0;
+  margin: 0;
+}
+
+div.tags {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.list div.tags {
+  margin: 1em .5em;
+}
+
+div.tags svg {
+  padding: 0;
+  margin: .25em 0;
+}
+
+div.tags ul {
+  padding: 0;
+  margin: 0 .5em;
+}
+
+div.tags ul li {
+  list-style: none;
+  display: inline;
+  font-family: "Roboto Mono";
+  font-size: 11pt;
+}
+
+div.tags ul li:after {
+  content: " • ";
+}
+
+div.tags ul li:last-child:after {
+  content: none;
 }

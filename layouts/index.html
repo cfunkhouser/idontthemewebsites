@@ -1,7 +1,14 @@
 {{ partial "header" . }}
-<main class="idfc">
+<header class="idfc">
+  <div>
+    <span class="subheading">{{ if .Site.Params.whoami }}I am {{ .Site.Params.whoami }}. {{ end }}
+      I do
+      {{ range $index, $element := .Site.Menus.main }}
+      {{ if $index }} and {{ end }}
+      <a href="{{ $element.URL }}">{{ $element.Name }}</a>{{ end }}.
+    </span>
+    <h1>{{ .Site.Title }}</h1>
     <div>
-        <h1>{{ .Site.Title }}</h1>
-    </div>
-</main>
-{{ partial "footer" . }}
+</header>
+</body>
+</html>

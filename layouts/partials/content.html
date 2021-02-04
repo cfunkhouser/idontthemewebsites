@@ -1,0 +1,16 @@
+{{/*
+    This template replaces the .Content variable native to Hugo. I do this to
+    allow shifting of headers from the markdown, so that the generated HTML is
+    valid, without making it annoying to write the Markdown.
+
+    In the Markdown, the topmost header can still be indicated with `#`, whereas
+    in the rendered HTML, it will likely be h2 or h3, depending on context.
+*/}}
+
+{{ $s := .RawContent }}
+
+{{ $s := delimit (slice "\n" $s "\n") "" }}
+{{ $s := $s | replaceRE "\n(#+) " "\n#$1 " }}
+{{ $s := $s | markdownify }}
+{{ $s := $s | safeHTML }}
+{{ $s }}
