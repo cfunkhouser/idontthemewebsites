@@ -6,6 +6,11 @@ body {
   text-rendering: geometricPrecision;
 }
 
+
+body {
+  margin: 0 20%;
+}
+
 code,
 pre,
 kbd {
@@ -16,57 +21,21 @@ pre {
   padding: 1em;
 }
 
-@media screen {
-  body {
-    margin: 0 auto;
-    max-width: 786px;
-  }
-
-  header {
-    margin: 2em 0;
-  }
-
-  section {
-    margin-top: 2em;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    margin: 0.25em 0;
-    font-weight: lighter;
-    font-size: inherit;
-  }
+main {
+  color: #4c4c4c;
 }
 
-@media print {
-  body {
-    margin: 0;
-  }
+section {
+  margin-top: 2em;
+}
 
-  header {
-    margin: 0.75em 0;
-  }
-
-  section {
-    margin-top: 0.5em;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    margin: 0;
-    font-weight: lighter;
-    font-size: inherit;
-  }
-
-  p {
-    margin: 0;
-  }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0.25em 0;
+  font-weight: lighter;
 }
 
 a {
@@ -77,114 +46,57 @@ a {
 a:hover {
   color: inherit;
   text-decoration: underline;
-}
-
-main {
-  color: #4c4c4c;
-}
-
-@media screen {
-  body {
-    margin: 0 25%;
-  }
-
-  header {
-    margin: 2em 0;
-  }
-
-  section {
-    margin-top: 2em;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    margin: 0.25em 0;
-    font-weight: lighter;
-    font-size: inherit;
-  }
-}
-
-@media print {
-  body {
-    margin: 0;
-  }
-
-  header {
-    margin: 0.75em 0;
-  }
-
-  section {
-    margin-top: 0.5em;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    margin: 0;
-    font-weight: lighter;
-    font-size: inherit;
-  }
-
-  p {
-    margin: 0;
-  }
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:hover {
-  color: inherit;
-  text-decoration: underline;
-}
-
-main {
-  color: #4c4c4c;
 }
 
 h1 {
-  font-size: 2.5em;
   color: #333;
 }
 
 h2,
-h1 + .subheading {
-  font-size: 1.8em;
+h1+.subheading {
   color: #333;
 }
 
 h3,
-h2 + .subheading {
-  font-size: 1.6em;
+h2+.subheading {
   color: #444;
 }
 
 h4,
-h3 + .subheading {
-  font-size: 1.2em;
+h3+.subheading {
   color: #666;
 }
 
 h5,
 h6,
-h4 + .subheading {
+h4+.subheading {
   color: #666;
 }
 
 header .subheading {
-  font-size: 1.2em;
   color: #666;
 }
 
 main p {
   text-indent: 2em;
+}
+
+main header {
+  margin: 2em 0 0 0;
+}
+
+main article header {
+  border-bottom: 1px solid #ccc;
+  margin: 0;
+}
+
+main article header h1,
+main article header h2,
+main article header h3,
+main article header h4,
+main article header h5,
+main article header h6 {
+  margin: 0;
 }
 
 footer {
@@ -227,13 +139,20 @@ svg {
   width: fit-content;
 }
 
-.list article {
-  padding-bottom: 1em;
-}
-
 .list p {
   text-indent: 0;
   margin: 0;
+}
+
+.list article {
+  border-radius: 15px;
+  border:  1px solid #ccc;
+  margin: 1.5em 0 0 0;
+  padding: 0.85em;
+}
+
+.list article:hover {
+  background-color: #eee;
 }
 
 div.tags {
@@ -242,7 +161,7 @@ div.tags {
 }
 
 .list div.tags {
-  margin: 1em .5em;
+  margin: 0.5em;
 }
 
 div.tags svg {

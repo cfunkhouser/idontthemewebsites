@@ -2,6 +2,10 @@
 <main>
   <article>
     <header>
+      <div class="header-with-subheading">
+        <h2>{{ .Title }}</h2>
+        <span class="subheading">{{ .Date.Format (.Site.Params.dateFormat | default "January 02, 2006") }}</span>
+      </div>
       <div class="tags">
         <svg width="16px" height="16px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <g fill-rule="evenodd">
@@ -15,10 +19,6 @@
           <li><a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">{{ . }}</a></li>
           {{ end }}
         </ul>
-      </div>
-      <div class="header-with-subheading">
-        <h2>{{ .Title }}</h2>
-        <span class="subheading">{{ .Date.Format (.Site.Params.dateFormat | default "January 02, 2006") }}</span>
       </div>
     </header>
     <section id="content">
