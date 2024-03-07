@@ -1,0 +1,268 @@
+html,
+body {
+  background-color: #fff;
+  color: #212121;
+  font-family: "Roboto Slab", serif;
+  margin: 0;
+  text-rendering: geometricPrecision;
+  width: 100%;
+  height: 100%;
+}
+
+code,
+pre,
+kbd {
+  font-family: "Roboto Mono", monospace;
+}
+
+pre {
+  padding: 1em;
+}
+
+main {
+  color: #4c4c4c;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: lighter;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+
+h1 {
+  color: #333;
+}
+
+h2,
+h1+.subheading {
+  color: #333;
+}
+
+h3,
+h2+.subheading {
+  color: #444;
+}
+
+h4,
+h3+.subheading {
+  color: #666;
+}
+
+h5,
+h6,
+h4+.subheading {
+  color: #666;
+}
+
+header .subheading {
+  color: #666;
+}
+
+.subheading a {
+  text-decoration: underline;
+}
+
+
+/** Landing page **/
+
+/**
+ * Start with some theme variables, to reference throughout the styles in this
+ * site.
+ */
+body.idfc-landing {
+  --idfc-splash-height: 90vh;
+  --idfc-teaser-height: 10vh;
+
+  --idfc-palette-base0: #333;
+  --idfc-palette-base1: #444;
+  --idfc-palette-base2: #666;
+  --idfc-palette-base3: #ccc;
+  --idfc-palette-base4: #eee;
+  --idfc-palette-base5: #fff;
+
+  /* --idfc-palette-accent0: #f72585;
+  --idfc-palette-accent1: #b5179e;
+  --idfc-palette-accent2: #7209b7;
+  --idfc-palette-accent3: #560bad;
+  --idfc-palette-accent4: #480ca8;
+  --idfc-palette-accent5: #3a0ca3;
+  --idfc-palette-accent6: #3f37c9;
+  --idfc-palette-accent7: #4361ee;
+  --idfc-palette-accent8: #4895ef;
+  --idfc-palette-accent9: #4cc9f0; */
+
+  --idfc-palette-accent0: #EF476F;
+  --idfc-palette-accent1: #F16284;
+  --idfc-palette-accent3: #FFC266;
+  --idfc-palette-accent2: #FFAE66;
+  --idfc-palette-accent4: #06D6A0;
+  --idfc-palette-accent5: #0CF9BA;
+  --idfc-palette-accent6: #118AB2;
+  --idfc-palette-accent7: #14A9DB;
+  --idfc-palette-accent8: #7209b7;
+  --idfc-palette-accent9: #7C099E;
+
+
+  --idfc-splash-primary-text: var(--idfc-palette-base0);
+  --idfc-splash-secondary-text: var(--idfc-palette-base2);
+  --idfc-splash-background: var(--idfc-palette-base5);
+
+  --idfc-section-header-foreground: var(--idfc-palette-base5);
+  --idfc-section-n_0-header-background: var(--idfc-palette-accent7);
+  --idfc-section-n_0-article-header-text: var(--idfc-palette-accent6);
+  --idfc-section-n_1-header-background: var(--idfc-palette-accent1);
+  --idfc-section-n_1-article-header-text: var(--idfc-palette-accent0);
+}
+
+/* Main splash content */
+body.idfc-landing>header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: var(--idfc-splash-height);
+  justify-content: center;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+
+  /* Clamp the font size to get responsive resizing in the splash. */
+  font-size: clamp(1rem, -0.875rem + 8vw, 2.5rem);
+}
+
+body.idfc-landing>header p:first-of-type {
+  /* background-image: url('/playout/arrow-left-web.svg');
+  background-position: center right 38%;
+  background-repeat: no-repeat;
+  background-size: 5em auto; */
+
+  font-size: clamp(1rem, -0.875rem + 8vw, 2.5rem);
+}
+
+body.idfc-landing>header h1 {
+  height: 2.25em;
+  margin: 0;
+  background-image: url('/playout/underline-web.svg');
+  background-position: bottom left 0.25em;
+  background-repeat: no-repeat;
+  background-size: auto 0.85em;
+}
+
+body.idfc-landing>header div:nth-child(2) {
+  padding-top: 2.5em;
+}
+
+body.idfc-landing>header button {
+  background-color: var(--idfc-splash-background);
+  background-image: url('/playout/text-circle-web.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  border: none;
+  color: var(--idfc-splash-secondary-text);
+  font-family: "Roboto Slab", serif;
+  font-size: clamp(0.45rem, -0.875rem + 8vw, 1.5rem);
+  margin: -2.5em -1em -1.5em -1em;
+  padding: 2em 1em 1.5em 1em;
+}
+
+/* Fixed to bottom at load */
+body.idfc-landing>main {
+  position: absolute;
+  top: var(--idfc-splash-height);
+  z-index: 2;
+
+  /**
+   * Set the main height to 100% of the viewport height so that no matter what
+   * the dimensions of the page, scrolling can always completely cover the
+   * splash with the content of the page. Nothing worse than the splash being
+   * still visible distracting from legibility.
+   */
+  height: 100vh;
+}
+
+body.idfc-landing>main section header {
+  text-align: center;
+  padding: 2.25em;
+}
+
+body.idfc-landing>main section:first-of-type header {
+  height: var(--idfc-teaser-height);
+}
+
+body.idfc-landing>main section header,
+body.idfc-landing>main section header h1,
+body.idfc-landing>main section header h2,
+body.idfc-landing>main section header h3,
+body.idfc-landing>main section header h4,
+body.idfc-landing>main section header h5,
+body.idfc-landing>main section header h6 {
+  color: var(--idfc-section-header-foreground);
+}
+
+body.idfc-landing>main section>section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: justify;
+  margin: 0 auto;
+}
+
+body.idfc-landing>main section>section article {
+  flex-basis: 1;
+  padding: 2em;
+  background-color: #fff;
+}
+
+body.idfc-landing>main section>section article p {
+  text-indent: 1.5em;
+}
+
+body.idfc-landing>main>section:nth-child(odd) {
+  background-color: var(--idfc-section-n_0-header-background);
+  text-align: center;
+}
+
+body.idfc-landing>main>section:nth-child(odd) header h2 {
+  background-image: url('/playout/arrow-thick-down-web.svg');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: auto 2.5em;
+  display: inline-block;
+  padding: 0 0 3em 0;
+  margin: 0 0 -3.25em 0;
+}
+
+body.idfc-landing>main section:nth-child(odd)>section h1,
+body.idfc-landing>main section:nth-child(odd)>section h2,
+body.idfc-landing>main section:nth-child(odd)>section h3,
+body.idfc-landing>main section:nth-child(odd)>section h4,
+body.idfc-landing>main section:nth-child(odd)>section h5,
+body.idfc-landing>main section:nth-child(odd)>section h6 {
+  color: var(--idfc-section-n_0-article-header-text);
+}
+
+body.idfc-landing>main>section:nth-child(even) {
+  background-color: var(--idfc-section-n_1-header-background);
+}
+
+body.idfc-landing>main section:nth-child(even)>section h1,
+body.idfc-landing>main section:nth-child(even)>section h2,
+body.idfc-landing>main section:nth-child(even)>section h3,
+body.idfc-landing>main section:nth-child(even)>section h4,
+body.idfc-landing>main section:nth-child(even)>section h5,
+body.idfc-landing>main section:nth-child(even)>section h6 {
+  color: var(--idfc-section-n_1-article-header-text);
+}
