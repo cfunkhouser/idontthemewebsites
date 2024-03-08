@@ -1,4 +1,7 @@
-# I Don't Theme Websites
+# Theme Name
 
-A [Hugo](https://gohugo.io) theme for
-[idontfixcomputers.com](http://www.idontfixcomputers.com/).
+## Features
+
+## Installation
+
+## Configuration
