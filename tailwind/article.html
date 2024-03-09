@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Christian Funkhouser doesn't fix computers.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta property="og:description" content="Christian Funkhouser doesn't fix computers." />
+  <meta property="og:title" content="I Don't Fix Computers" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.idontfixcomputers.com/" />
+
+  <title>I Don't Fix Computers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body class="bg-white dark:bg-gray-800 text-gray-700 dark:text-white antialiased">
+  <header class="container max-w-3xl mx-auto py-4 border-b border-gray-200 dark:border-gray-700">
+    <div class="mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-medium text-gray-800 dark:text-white after:content-['.']">I Don't Fix
+        Computers</h1>
+      <nav class="flex flex-row [&>*]:pr-1 text-lg">
+        <p>But, I do</p>
+        <ul
+          class="flex flex-row list-none [&>*]:pr-1 [&>*:not(:nth-last-child(-n+3))]:after:content-[','] [&>*:nth-last-child(1)]:after:content-['.']">
+          <li><a href="#">Write</a></li>
+          <li><a href="#">Code</a></li>
+          <li><a href="#">Things</a></li>
+          <li>and</li>
+          <li><a href="#">Stuff</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="container max-w-3xl mx-auto py-4">
+    <!-- Main Article -->
+    <article>
+      <header class="mb-4">
+        <h2 class="text-xl font-medium text-gray-800 dark:text-white">This is an article.</h2>
+        <p class="text-gray-500 dark:text-gray-200">This is a subtitle. It may contain a date, like
+          <time datetime="2024-03-08">March 8, 2024</time>
+        </p>
+      </header>
+
+      <main class="indent-6 tracking-wide leading-loose [&>*]:pb-2">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum massa enim, venenatis ullamcorper
+          hendrerit
+          vitae, malesuada id mauris. Etiam convallis urna quis urna finibus, non porta sapien pellentesque. Aliquam
+          vel
+          orci et ex blandit varius. Curabitur euismod fermentum orci, at rhoncus nibh maximus in. Pellentesque
+          cursus
+          congue facilisis. Donec augue diam, varius ac pulvinar pellentesque, venenatis a ante. Duis quis lacus sit
+          amet
+          ipsum fringilla ultrices. Vivamus quis ullamcorper nibh. Donec auctor leo ac orci semper congue.
+        </p>
+        <p>
+          Phasellus laoreet lorem consectetur volutpat scelerisque. Aenean euismod id arcu sit amet egestas.
+          Praesent
+          dignissim et turpis vel pretium. Sed nec elit non ex maximus imperdiet. Integer urna nunc, dignissim ut
+          leo
+          id,
+          hendrerit consectetur purus. Nullam et ultricies nisi. Aliquam efficitur consequat nunc, finibus aliquet
+          quam
+          volutpat tincidunt. Sed placerat faucibus sem a faucibus. Vivamus mattis leo consequat hendrerit
+          fermentum.
+          Sed
+          fermentum ultricies leo eget mattis. Aenean mollis euismod suscipit. Donec vehicula, elit a interdum
+          vehicula,
+          orci dui commodo nisi, sed congue nibh risus sit amet elit. Nulla commodo convallis ligula maximus rutrum.
+          Fusce
+          vulputate risus vitae purus aliquet, vitae tempus sapien bibendum.
+        </p>
+        <figure class="bg-gray-700 dark:bg-gray-950 text-white rounded-md p-4">
+          <figcaption class="text-center font-light border-b">
+            Fig X: A fakescreenshot from GCP.
+          </figcaption>
+          <img src="/img/fake-screenshot.png" alt="A fake screenshot" class="py-2">
+        </figure>
+        <p>
+          Nam eget sem eu ipsum vestibulum tempor. Quisque consequat libero ac urna ultrices lacinia. Nunc
+          malesuada,
+          orci
+          eu sodales rutrum, leo arcu interdum diam, a condimentum felis sem eu eros. Cras iaculis in quam vel
+          scelerisque. Etiam eget lorem eget nisi condimentum convallis. Etiam facilisis volutpat metus, eget varius
+          felis
+          mattis at. Nunc a ante eu dui egestas aliquet. Morbi et eros eget tortor accumsan aliquam eu feugiat odio.
+          Vivamus et libero sit amet tortor venenatis convallis. Donec non pretium lacus, eu tempus augue. Class
+          aptent
+          taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas congue nulla ac
+          tortor
+          pulvinar, ac sollicitudin mi vestibulum. Etiam venenatis nisi ex, nec faucibus mi venenatis quis.
+        </p>
+        <figure class="bg-gray-700 dark:bg-gray-950 text-white rounded-md p-4">
+          <figcaption class="text-center font-light border-b">Look, it's some <strong>Go</strong> code.</strong>
+          </figcaption>
+          <code class="block whitespace-pre font-mono text-sm sm:text-base">
+func main() {
+  logger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
+  flag.Parse()
+  if *address == "" {
+    logger.Error("Can't bind an empty address")
+    os.Exit(1)
+  }
+
+  http.Handle("/", echo.New(logger))
+  logger.Info("Server starting", "address", *address)
+
+  err := http.ListenAndServe(*address, nil)
+  logger.Info("Server has exited", "error", err)
+}
+          </code>
+        </figure>
+        <p>
+          Duis vehicula mi et orci vestibulum, eu tempor ligula fermentum. Quisque pulvinar sapien eu mi cursus
+          sagittis.
+          Nulla dapibus felis sit amet scelerisque ornare. Etiam fermentum, ipsum sit amet viverra aliquam, libero
+          ante
+          sodales magna, eget vestibulum nisl mauris non augue. Morbi et arcu massa. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Nulla magna tellus, gravida vitae mauris in, mollis dignissim tortor. Morbi
+          id
+          fringilla dui, a iaculis magna. Duis augue dolor, cursus vel dictum placerat, ullamcorper id lacus. Proin
+          aliquet eros nec arcu eleifend viverra. Suspendisse sodales eget est sed auctor. Vivamus mattis, elit et
+          facilisis bibendum, nibh tortor mollis eros, at aliquet mi sem eu quam. Aenean ex justo, condimentum at
+          ultrices
+          ac, euismod ut velit. Proin viverra semper lectus, tincidunt ullamcorper metus consequat aliquam.
+        </p>
+        <p>
+          Mauris scelerisque urna in nunc eleifend, eu egestas turpis malesuada. Aenean eleifend nunc felis, quis
+          viverra
+          tellus molestie vitae. Donec ut tincidunt mauris. In tempus ullamcorper nisl in porttitor. Sed ullamcorper
+          scelerisque mattis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+          egestas. Proin malesuada mollis dui eu rhoncus.
+        </p>
+      </main>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="shadow-inner bg-gray-50 dark:bg-gray-700 py-4 ">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 Article Layout. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
+
+<!-- Hi, Min! -->
