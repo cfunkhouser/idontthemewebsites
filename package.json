@@ -3,10 +3,12 @@
   "version": "2.0.0",
   "author": "Christian Funkhouser <christian@funkhouse.rs>",
   "scripts": {
+    "build-assets": "./scripts/build-assets.sh",
     "ui-dev": "./scripts/ui-dev.sh"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.18",
+    "cssnano": "^6.1.0",
     "live-server": "^1.2.2",
     "postcss": "^8.4.35",
     "postcss-cli": "^11.0.0",

@@ -1,10 +1,18 @@
-{{ define "main" }}
-  <h1>{{ .Title }}</h1>
-
+{{- define "main" }}
   {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
   {{ $dateHuman := .Date | time.Format ":date_long" }}
-  <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-
-  {{ .Content }}
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
-{{ end }}
+  <article>
+    <header class="border-b">
+      <h2>{{ .Title }}</h2>
+      <p>
+        It was written <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>.
+      </p>
+    </header>
+    <main>
+      {{ .Content }}
+    </main>
+    <aside>
+      {{ partial "themes.html" (dict "taxonomy" "themes" "page" .) }}
+    </aside>
+  </article>
+{{- end -}}

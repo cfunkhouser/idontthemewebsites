@@ -1,8 +1,26 @@
-{{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
-{{ end }}
+{{- define "main" }}
+  <div class="list">
+    <article>
+      <header>
+        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+        <p>{{.Summary}}</p>
+      </header>
+    </article>
+
+    {{- range .Pages }}
+    <article>
+      <header>
+        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+        <p>This is a subtitle. It may contain a date, like
+          <time datetime="2024-03-08">March 10, 2024</time>.
+        </p>
+      </header>
+
+      <section>
+        {{ partial "themes.html" (dict "taxonomy" "themes" "page" .) }}
+        {{ .Summary }}
+      </section>
+    </article>
+    {{- end }}
+  </div>
+{{- end -}}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ or .Site.Language.LanguageCode site.Language.Lang }}" dir="{{ or .Site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body class="landing">
+  <main>
+    <header>
+      <p>{{ .Site.Params.Slug | .RenderString }}</p>
+      <h1>{{ .Site.Title }}</h1>
+      <nav>
+        <p>I do</p>
+        <ul>
+        {{- range .Site.Menus.main.ByWeight }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{- end }}
+        </ul>
+        <p>Maybe check that out.</p>
+      </nav>
+    </header>
+  </main>
+  <footer>
+    {{ partial "footer.html" . }}
+  </footer>
+</body>
+</html>

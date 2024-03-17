@@ -1,0 +1,14 @@
+{{- $caption := .Text }}
+{{- if not ( $caption )}}
+  {{- $caption = .Title }}
+{{- end -}}
+<figure class="flex flex-col justify-between">
+  {{- if $caption }}
+  <figcaption>
+    {{- $caption -}}
+  </figcaption>
+  {{- end }}
+  <img class="object-center" src="{{ .Destination | safeURL }}"
+    {{- with .Text }} alt="{{ . }}"{{ end -}}
+    {{- with .Title }} title="{{ . }}"{{ end -}} >
+</figure>

@@ -41,7 +41,7 @@
   }
 
   figure {
-    @apply text-gray-500 dark:text-gray-300 rounded-md p-4 my-4;
+    @apply flex flex-col justify-between text-gray-500 dark:text-gray-300 rounded-md p-4 my-4;
   }
 
   figure figcaption {
@@ -80,43 +80,42 @@
     @apply container mx-auto text-center;
   }
 
-  header nav>* {
+  nav>* {
     @apply pr-1;
   }
 
-  header nav {
+  nav {
     @apply flex flex-row text-lg;
   }
 
-  header nav>*:not(:nth-last-child(1)) {
+  nav>*:not(:last-child) {
     @apply pr-1;
   }
 
-  header nav>ol,
-  header nav>ul {
+  nav>ol,
+  nav>ul {
     @apply flex flex-row list-none;
   }
 
-  header nav>ol>li,
-  header nav>ul>li {
+  nav>ol>li,
+  nav>ul>li {
     @apply pr-1;
   }
 
-  header nav>ol>li:not(:nth-last-child(-n+2)):after,
-  header nav>ul>li:not(:nth-last-child(-n+2)):after {
+  nav>ol>li:not(:nth-last-child(-n+2)):after,
+  nav>ul>li:not(:nth-last-child(-n+2)):after {
     content: ',';
   }
 
-  header nav>ol>li:nth-last-child(2):after,
-  header nav>ul>li:nth-last-child(2):after {
+  nav>ol>li:nth-last-child(2):after,
+  nav>ul>li:nth-last-child(2):after {
     content: ', and';
   }
 
-  header nav>ol>li:nth-last-child(1):after,
-  header nav>ul>li:nth-last-child(1):after {
+  nav>ol>li:nth-last-child(1):after,
+  nav>ul>li:nth-last-child(1):after {
     content: '.';
   }
-
 
   /*** Landing Page ***/
   .landing main {
@@ -136,19 +135,19 @@
   }
 
   .landing header nav {
-    @apply flex flex-row font-light pt-8;
+    @apply flex flex-row pt-8;
   }
 
   /*** List Page ***/
-  .list main>article {
+  main .list>article {
     @apply pb-4 mb-8;
   }
 
-  .list main>article:not(:nth-last-child(1)) {
+  main .list>article:not(:nth-last-child(1)) {
     @apply border-b;
   }
 
-  .list main article>section {
-    @apply line-clamp-3;
+  main .list article>section {
+    @apply line-clamp-2;
   }
 }

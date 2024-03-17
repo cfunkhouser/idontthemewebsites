@@ -1,5 +1,15 @@
+{{- $title := site.Title }}
+{{- if .IsHome }}
+  {{- $title = ( printf "%s - %s" .Title site.Title ) }}
+{{- end -}}
+
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+<meta name="description" content="{{- .Site.Params.Slug | .RenderString | plainify -}}">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta property="og:description" content="{{- .Site.Params.Slug | .RenderString | plainify -}}" />
+<meta property="og:title" content="{{- $title -}}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{- .Site.BaseURL -}}" />
+<title>{{ $title }}</title>
+
 {{ partialCached "head/css.html" . }}
-{{ partialCached "head/js.html" . }}
