@@ -8,15 +8,14 @@ set -e
 
 npx live-server \
     --entry-file=landing.html \
-    --mount=/:./assets \
-    --mount=/:./build \
+    --mount=/:./static \
     --no-browser \
     --no-css-inject \
   ./tailwind \
 &
 
 npx postcss \
-    -o ./build/css/main.css \
+    -o ./static/css/main.css \
     --watch \
   ./tailwind/main.css \
 &

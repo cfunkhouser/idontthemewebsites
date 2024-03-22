@@ -1,14 +1,21 @@
+{{/*
+The opening </p> and closing <p> are a workaround for the fact that Hugo offers
+no way to prevent wrapping images in p tags. This is ugly, but at least results
+in valid HTML. Figure elements are not valid children of p elements.
+*/}}
+</p>
 {{- $caption := .Text }}
 {{- if not ( $caption )}}
   {{- $caption = .Title }}
 {{- end -}}
 <figure class="flex flex-col justify-between">
-  {{- if $caption }}
+  <img class="object-center" src="{{ .Destination | safeURL }}"
+    {{- with .Text }} alt="{{ . }}"{{ end -}}
+    {{- with .Title }} title="{{ . }}"{{ end -}} >
+  {{- if $caption -}}
   <figcaption>
     {{- $caption -}}
   </figcaption>
   {{- end }}
-  <img class="object-center" src="{{ .Destination | safeURL }}"
-    {{- with .Text }} alt="{{ . }}"{{ end -}}
-    {{- with .Title }} title="{{ . }}"{{ end -}} >
 </figure>
+<p>

@@ -18,7 +18,7 @@
     href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
-
+  <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 
@@ -54,31 +54,713 @@
           </ul>
         </nav>
       </header>
-      <section>
-        <p>Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis. Proident fugiat
-          labore eu laboris officia Lorem enim. Ipsum occaecat cillum ut tempor id sint aliqua incididunt nisi
-          incididunt reprehenderit. Voluptate ad minim sint est aute aliquip esse occaecat tempor officia qui sunt. Aute
-          ex ipsum id ut in est velit est laborum incididunt. Aliqua qui id do esse sunt eiusmod id deserunt eu nostrud
-          aute sit ipsum. Deserunt esse cillum Lorem non magna adipisicing mollit amet consequat.</p>
-        <p>
+      <main class="prose prose-sm">
+        <h1 id="headers">Headers</h1>
+        <pre tabindex="0"><code># h1 Heading 8-)
+  ## h2 Heading
+  ### h3 Heading
+  #### h4 Heading
+  ##### h5 Heading
+  ###### h6 Heading
+  
+  Alternatively, for H1 and H2, an underline-ish style:
+  
+  Alt-H1
+  ======
+  
+  Alt-H2
+  ------
+  </code></pre>
+        <h1 id="h1-heading-8-">h1 Heading 8-)</h1>
+        <h2 id="h2-heading">h2 Heading</h2>
+        <h3 id="h3-heading">h3 Heading</h3>
+        <h4 id="h4-heading">h4 Heading</h4>
+        <h5 id="h5-heading">h5 Heading</h5>
+        <h6 id="h6-heading">h6 Heading</h6>
+        <p>Alternatively, for H1 and H2, an underline-ish style:</p>
+        <h1 id="alt-h1">Alt-H1</h1>
+        <h2 id="alt-h2">Alt-H2</h2>
+        <hr>
+        <h1 id="emphasis">Emphasis</h1>
+        <pre tabindex="0"><code>Emphasis, aka italics, with *asterisks* or _underscores_.
+  
+  Strong emphasis, aka bold, with **asterisks** or __underscores__.
+  
+  Combined emphasis with **asterisks and _underscores_**.
+  
+  Strikethrough uses two tildes. ~~Scratch this.~~
+  
+  **This is bold text**
+  
+  __This is bold text__
+  
+  *This is italic text*
+  
+  _This is italic text_
+  
+  ~~Strikethrough~~
+  </code></pre>
+        <p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p>
+        <p>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>.</p>
+        <p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
+        <p>Strikethrough uses two tildes. <del>Scratch this.</del></p>
+        <p><strong>This is bold text</strong></p>
+        <p><strong>This is bold text</strong></p>
+        <p><em>This is italic text</em></p>
+        <p><em>This is italic text</em></p>
+        <p><del>Strikethrough</del></p>
+        <hr>
+        <h1 id="lists">Lists</h1>
+        <pre tabindex="0"><code>1. First ordered list item
+  2. Another item
+  ⋅⋅* Unordered sub-list.
+  1. Actual numbers don&#39;t matter, just that it&#39;s a number
+  ⋅⋅1. Ordered sub-list
+  4. And another item.
+  
+  ⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we&#39;ll use three here to also align the raw Markdown).
+  
+  ⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+  ⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
+  ⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+  
+  * Unordered list can use asterisks
+  - Or minuses
+  + Or pluses
+  
+  1. Make my changes
+      1. Fix bug
+      2. Improve formatting
+          - Make the headings bigger
+  2. Push my commits to GitHub
+  3. Open a pull request
+      * Describe my changes
+      * Mention all the members of my team
+          * Ask for feedback
+  
+  + Create a list by starting a line with `+`, `-`, or `*`
+  + Sub-lists are made by indenting 2 spaces:
+    - Marker character change forces new list start:
+      * Ac tristique libero volutpat at
+      + Facilisis in pretium nisl aliquet
+      - Nulla volutpat aliquam velit
+  + Very easy!
+  </code></pre>
+        <ol>
+          <li>First ordered list item</li>
+          <li>Another item
+            ⋅⋅* Unordered sub-list.</li>
+          <li>Actual numbers don&rsquo;t matter, just that it&rsquo;s a number
+            ⋅⋅1. Ordered sub-list</li>
+          <li>And another item.</li>
+        </ol>
+        <p>⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading
+          spaces (at least one, but we&rsquo;ll use three here to also align the raw Markdown).</p>
+        <p>⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+          ⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
+          ⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)</p>
+        <ul>
+          <li>Unordered list can use asterisks</li>
+        </ul>
+        <ul>
+          <li>Or minuses</li>
+        </ul>
+        <ul>
+          <li>Or pluses</li>
+        </ul>
+        <ol>
+          <li>Make my changes
+            <ol>
+              <li>Fix bug</li>
+              <li>Improve formatting
+                <ul>
+                  <li>Make the headings bigger</li>
+                </ul>
+              </li>
+            </ol>
+          </li>
+          <li>Push my commits to GitHub</li>
+          <li>Open a pull request
+            <ul>
+              <li>Describe my changes</li>
+              <li>Mention all the members of my team
+                <ul>
+                  <li>Ask for feedback</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <ul>
+          <li>Create a list by starting a line with <code>+</code>, <code>-</code>, or <code>*</code></li>
+          <li>Sub-lists are made by indenting 2 spaces:
+            <ul>
+              <li>Marker character change forces new list start:
+                <ul>
+                  <li>Ac tristique libero volutpat at</li>
+                  <li>Facilisis in pretium nisl aliquet</li>
+                  <li>Nulla volutpat aliquam velit</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Very easy!</li>
+        </ul>
+        <hr>
+        <h1 id="task-lists">Task lists</h1>
+        <pre tabindex="0"><code>- [x] Finish my changes
+  - [ ] Push my commits to GitHub
+  - [ ] Open a pull request
+  - [x] @mentions, #refs, [links](), **formatting**, and &lt;del&gt;tags&lt;/del&gt; supported
+  - [x] list syntax required (any unordered or ordered list supported)
+  - [x] this is a complete item
+  - [ ] this is an incomplete item
+  </code></pre>
+        <ul>
+          <li><input checked="" disabled="" type="checkbox"> Finish my changes</li>
+          <li><input disabled="" type="checkbox"> Push my commits to GitHub</li>
+          <li><input disabled="" type="checkbox"> Open a pull request</li>
+          <li><input checked="" disabled="" type="checkbox"> @mentions, #refs, <a href="">links</a>,
+            <strong>formatting</strong>, and <!-- raw HTML omitted -->tags<!-- raw HTML omitted --> supported
+          </li>
+          <li><input checked="" disabled="" type="checkbox"> list syntax required (any unordered or ordered list
+            supported)</li>
+          <li><input disabled="" type="checkbox"> this is a complete item</li>
+          <li><input disabled="" type="checkbox"> this is an incomplete item</li>
+        </ul>
+        <hr>
+        <h1 id="ignoring-markdown-formatting">Ignoring Markdown formatting</h1>
+        <p>You can tell GitHub to ignore (or escape) Markdown formatting by using \ before the Markdown character.</p>
+        <pre tabindex="0"><code>Let&#39;s rename \*our-new-project\* to \*our-old-project\*.
+  </code></pre>
+        <p>Let&rsquo;s rename *our-new-project* to *our-old-project*.</p>
+        <hr>
+        <h1 id="links">Links</h1>
+        <pre tabindex="0"><code>[I&#39;m an inline-style link](https://www.google.com)
+  
+  [I&#39;m an inline-style link with title](https://www.google.com &#34;Google&#39;s Homepage&#34;)
+  
+  [I&#39;m a reference-style link][Arbitrary case-insensitive reference text]
+  
+  [I&#39;m a relative reference to a repository file](../blob/master/LICENSE)
+  
+  [You can use numbers for reference-style link definitions][1]
+  
+  Or leave it empty and use the [link text itself].
+  
+  URLs and URLs in angle brackets will automatically get turned into links.
+  http://www.example.com or &lt;http://www.example.com&gt; and sometimes
+  example.com (but not on Github, for example).
+  
+  Some text to show that the reference links can follow later.
+  
+  [arbitrary case-insensitive reference text]: https://www.mozilla.org
+  [1]: http://slashdot.org
+  [link text itself]: http://www.reddit.com
+  </code></pre>
+        <p><a href="https://www.google.com">I&rsquo;m an inline-style link</a></p>
+        <p><a href="https://www.google.com" title="Google's Homepage">I&rsquo;m an inline-style link with title</a></p>
+        <p><a href="https://www.mozilla.org">I&rsquo;m a reference-style link</a></p>
+        <p><a href="../blob/master/LICENSE">I&rsquo;m a relative reference to a repository file</a></p>
+        <p><a href="http://slashdot.org">You can use numbers for reference-style link definitions</a></p>
+        <p>Or leave it empty and use the <a href="http://www.reddit.com">link text itself</a>.</p>
+        <p>URLs and URLs in angle brackets will automatically get turned into links.
+          <a href="http://www.example.com">http://www.example.com</a> or <a
+            href="http://www.example.com">http://www.example.com</a> and sometimes
+          example.com (but not on Github, for example).
+        </p>
+        <p>Some text to show that the reference links can follow later.</p>
+        <hr>
+        <h1 id="images">Images</h1>
+        <pre tabindex="0"><code>Here&#39;s our logo (hover to see the title text):
+  
+  Inline-style:
+  ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png &#34;Logo Title Text 1&#34;)
+  
+  Reference-style:
+  ![alt text][logo]
+  
+  [logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png &#34;Logo Title Text 2&#34;
+  
+  ![Minion](https://octodex.github.com/images/minion.png)
+  ![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg &#34;The Stormtroopocat&#34;)
+  
+  Like links, Images also have a footnote style syntax
+  
+  ![Alt text][id]
+  
+  With a reference later in the document defining the URL location:
+  
+  [id]: https://octodex.github.com/images/dojocat.jpg  &#34;The Dojocat&#34;
+  </code></pre>
+        <p>Here&rsquo;s our logo (hover to see the title text):</p>
+        <p>Inline-style:
         <figure class="flex flex-col justify-between">
-          <figcaption>Bryce Canyon National Park</figcaption>
-          <img class="object-center" src="bryce-canyon.jpg" alt="Bryce Canyon National Park">
+          <figcaption>alt text</figcaption>
+          <img class="object-center"
+            src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" alt="alt text"
+            title="Logo Title Text 1">
         </figure>
         </p>
-        <p>Sit excepteur do velit veniam mollit in nostrud laboris incididunt ea. Amet eu cillum ut reprehenderit culpa
-          aliquip labore laborum amet sit sit duis. Laborum id proident nostrud dolore laborum reprehenderit quis mollit
-          nulla amet veniam officia id id. Aliquip in deserunt qui magna duis qui pariatur officia sunt deserunt.</p>
-
-      </section>
+        <p>Reference-style:
+        <figure class="flex flex-col justify-between">
+          <figcaption>alt text</figcaption>
+          <img class="object-center"
+            src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" alt="alt text"
+            title="Logo Title Text 2">
+        </figure>
+        </p>
+        <p>
+        <figure class="flex flex-col justify-between">
+          <figcaption>Minion</figcaption>
+          <img class="object-center" src="https://octodex.github.com/images/minion.png" alt="Minion">
+        </figure>
+        <figure class="flex flex-col justify-between">
+          <figcaption>Stormtroopocat</figcaption>
+          <img class="object-center" src="https://octodex.github.com/images/stormtroopocat.jpg" alt="Stormtroopocat"
+            title="The Stormtroopocat">
+        </figure>
+        </p>
+        <p>Like links, Images also have a footnote style syntax</p>
+        <p>
+        <figure class="flex flex-col justify-between">
+          <figcaption>Alt text</figcaption>
+          <img class="object-center" src="https://octodex.github.com/images/dojocat.jpg" alt="Alt text"
+            title="The Dojocat">
+        </figure>
+        </p>
+        <p>With a reference later in the document defining the URL location:</p>
+        <hr>
+        <h1 id="footnoteshttpsgithubcommarkdown-itmarkdown-it-footnote"><a
+            href="https://github.com/markdown-it/markdown-it-footnote">Footnotes</a></h1>
+        <pre tabindex="0"><code>Footnote 1 link[^first].
+  
+  Footnote 2 link[^second].
+  
+  Inline footnote^[Text of inline footnote] definition.
+  
+  Duplicated footnote reference[^second].
+  
+  [^first]: Footnote **can have markup**
+  
+      and multiple paragraphs.
+  
+  [^second]: Footnote text.
+  </code></pre>
+        <p>Footnote 1 link<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+        <p>Footnote 2 link<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+        <p>Inline footnote^[Text of inline footnote] definition.</p>
+        <p>Duplicated footnote reference<sup id="fnref1:2"><a href="#fn:2" class="footnote-ref"
+              role="doc-noteref">2</a></sup>.</p>
+        <hr>
+        <h1 id="code-and-syntax-highlighting">Code and Syntax Highlighting</h1>
+        <pre tabindex="0"><code>Inline `code` has `back-ticks around` it.
+  </code></pre>
+        <p>Inline <code>code</code> has <code>back-ticks around</code> it.</p>
+        <div class="highlight">
+          <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c#" data-lang="c#"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.IO.Compression;
+  </span></span><span style="display:flex;"><span>
+  </span></span><span style="display:flex;"><span><span style="color:#75715e">#pragma</span> warning disable <span style="color:#ae81ff">414</span>, <span style="color:#ae81ff">3021</span>
+  </span></span><span style="display:flex;"><span>
+  </span></span><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> MyApplication
+  </span></span><span style="display:flex;"><span>{
+  </span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [Obsolete(&#34;...&#34;)]</span>
+  </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span> : IInterface
+  </span></span><span style="display:flex;"><span>    {
+  </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> List&lt;<span style="color:#66d9ef">int</span>&gt; JustDoIt(<span style="color:#66d9ef">int</span> count)
+  </span></span><span style="display:flex;"><span>        {
+  </span></span><span style="display:flex;"><span>            Console.WriteLine(<span style="color:#e6db74">$&#34;Hello {Name}!&#34;</span>);
+  </span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">int</span>&gt;(<span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span>[] { <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span> })
+  </span></span><span style="display:flex;"><span>        }
+  </span></span><span style="display:flex;"><span>    }
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre>
+        </div>
+        <div class="highlight">
+          <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>@<span style="color:#66d9ef">font-face</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#f92672">font-family</span><span style="color:#f92672">:</span> <span style="color:#f92672">Chunkfive</span><span style="color:#f92672">;</span> <span style="color:#f92672">src</span><span style="color:#f92672">:</span> <span style="color:#f92672">url</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Chunkfive.otf&#39;</span><span style="color:#f92672">);</span>
+  </span></span><span style="display:flex;"><span>}
+  </span></span><span style="display:flex;"><span>
+  </span></span><span style="display:flex;"><span><span style="color:#f92672">body</span><span style="color:#f92672">,</span> .<span style="color:#a6e22e">usertext</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#F0F0F0</span>; <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#600</span>;
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">font-family</span>: Chunkfive, sans;
+  </span></span><span style="display:flex;"><span>}
+  </span></span><span style="display:flex;"><span>
+  </span></span><span style="display:flex;"><span>@<span style="color:#66d9ef">import</span> <span style="color:#f92672">url</span><span style="color:#f92672">(</span><span style="color:#f92672">print</span>.<span style="color:#a6e22e">css</span><span style="color:#f92672">)</span>;
+  </span></span><span style="display:flex;"><span>@<span style="color:#66d9ef">media</span> <span style="color:#f92672">print</span> {
+  </span></span><span style="display:flex;"><span>  <span style="color:#f92672">a</span><span style="color:#f92672">[</span><span style="color:#f92672">href</span><span style="color:#f92672">^=</span><span style="color:#f92672">http</span><span style="color:#f92672">]</span>::<span style="color:#a6e22e">after</span> {
+  </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">content</span>: attr(href)
+  </span></span><span style="display:flex;"><span>  }
+  </span></span><span style="display:flex;"><span>}
+  </span></span></code></pre>
+        </div>
+        <div class="highlight">
+          <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">$initHighlight</span>(<span style="color:#a6e22e">block</span>, <span style="color:#a6e22e">cls</span>) {
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span> {
+  </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">cls</span>.<span style="color:#a6e22e">search</span>(<span style="color:#e6db74">/\bno\-highlight\b/</span>) <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+  </span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">process</span>(<span style="color:#a6e22e">block</span>, <span style="color:#66d9ef">true</span>, <span style="color:#ae81ff">0x0F</span>) <span style="color:#f92672">+</span>
+  </span></span><span style="display:flex;"><span>             <span style="color:#e6db74">` class=&#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">cls</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;`</span>;
+  </span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">e</span>) {
+  </span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* handle exception */</span>
+  </span></span><span style="display:flex;"><span>  }
+  </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">classes</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+  </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">checkCondition</span>(<span style="color:#a6e22e">classes</span>[<span style="color:#a6e22e">i</span>]) <span style="color:#f92672">===</span> <span style="color:#66d9ef">undefined</span>)
+  </span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;undefined&#39;</span>);
+  </span></span><span style="display:flex;"><span>  }
+  </span></span><span style="display:flex;"><span>}
+  </span></span><span style="display:flex;"><span>
+  </span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span>  <span style="color:#a6e22e">$initHighlight</span>;
+  </span></span></code></pre>
+        </div>
+        <div class="highlight">
+          <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">require_once</span> <span style="color:#e6db74">&#39;Zend/Uri/Http.php&#39;</span>;
+  </span></span><span style="display:flex;"><span>
+  </span></span><span style="display:flex;"><span><span style="color:#66d9ef">namespace</span> <span style="color:#a6e22e">Location\Web</span>;
+  </span></span><span style="display:flex;"><span>
+  </span></span><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Factory</span>
+  </span></span><span style="display:flex;"><span>{
+  </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">_factory</span>();
+  </span></span><span style="display:flex;"><span>}
+  </span></span><span style="display:flex;"><span>
+  </span></span><span style="display:flex;"><span><span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">URI</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">BaseURI</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">Factory</span>
+  </span></span><span style="display:flex;"><span>{
+  </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">test</span>();
+  </span></span><span style="display:flex;"><span>
+  </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> $st1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+  </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">ME</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Yo&#34;</span>;
+  </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> $list <span style="color:#f92672">=</span> <span style="color:#66d9ef">NULL</span>;
+  </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> $var;
+  </span></span><span style="display:flex;"><span>
+  </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">/**
+  </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     * Returns a URI
+  </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     *
+  </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     * @return URI
+  </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">     */</span>
+  </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">_factory</span>($stats <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span>(), $uri <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http&#39;</span>)
+  </span></span><span style="display:flex;"><span>    {
+  </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">echo</span> <span style="color:#66d9ef">__METHOD__</span>;
+  </span></span><span style="display:flex;"><span>        $uri <span style="color:#f92672">=</span> <span style="color:#a6e22e">explode</span>(<span style="color:#e6db74">&#39;:&#39;</span>, $uri, <span style="color:#ae81ff">0</span><span style="color:#a6e22e">b10</span>);
+  </span></span><span style="display:flex;"><span>        $schemeSpecific <span style="color:#f92672">=</span> <span style="color:#a6e22e">isset</span>($uri[<span style="color:#ae81ff">1</span>]) <span style="color:#f92672">?</span> $uri[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;&#39;</span>;
+  </span></span><span style="display:flex;"><span>        $desc <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Multi
+  </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">line description&#39;</span>;
+  </span></span><span style="display:flex;"><span>
+  </span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Security check
+  </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">ctype_alnum</span>($scheme)) {
+  </span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Zend_Uri_Exception</span>(<span style="color:#e6db74">&#39;Illegal scheme&#39;</span>);
+  </span></span><span style="display:flex;"><span>        }
+  </span></span><span style="display:flex;"><span>
+  </span></span><span style="display:flex;"><span>        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">var</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">self</span><span style="color:#f92672">::</span>$st;
+  </span></span><span style="display:flex;"><span>        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">list</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">list</span>(<span style="color:#66d9ef">Array</span>(<span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">2</span><span style="color:#f92672">=&gt;</span><span style="color:#a6e22e">self</span><span style="color:#f92672">::</span><span style="color:#a6e22e">ME</span>, <span style="color:#ae81ff">3</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">\Location\Web\URI</span><span style="color:#f92672">::</span><span style="color:#a6e22e">class</span>));
+  </span></span><span style="display:flex;"><span>
+  </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> [
+  </span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;uri&#39;</span>   <span style="color:#f92672">=&gt;</span> $uri,
+  </span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#39;value&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">null</span>,
+  </span></span><span style="display:flex;"><span>        ];
+  </span></span><span style="display:flex;"><span>    }
+  </span></span><span style="display:flex;"><span>}
+  </span></span><span style="display:flex;"><span>
+  </span></span><span style="display:flex;"><span><span style="color:#66d9ef">echo</span> <span style="color:#a6e22e">URI</span><span style="color:#f92672">::</span><span style="color:#a6e22e">ME</span> <span style="color:#f92672">.</span> <span style="color:#a6e22e">URI</span><span style="color:#f92672">::</span>$st1;
+  </span></span><span style="display:flex;"><span>
+  </span></span><span style="display:flex;"><span><span style="color:#a6e22e">__halt_compiler</span> () ; <span style="color:#a6e22e">datahere</span>
+  </span></span><span style="display:flex;"><span><span style="color:#a6e22e">datahere</span>
+  </span></span><span style="display:flex;"><span><span style="color:#a6e22e">datahere</span> <span style="color:#f92672">*/</span>
+  </span></span><span style="display:flex;"><span><span style="color:#a6e22e">datahere</span>
+  </span></span></code></pre>
+        </div>
+        <hr>
+        <h1 id="tables">Tables</h1>
+        <pre tabindex="0"><code>Colons can be used to align columns.
+  
+  | Tables        | Are           | Cool  |
+  | ------------- |:-------------:| -----:|
+  | col 3 is      | right-aligned | $1600 |
+  | col 2 is      | centered      |   $12 |
+  | zebra stripes | are neat      |    $1 |
+  
+  There must be at least 3 dashes separating each header cell.
+  The outer pipes (|) are optional, and you don&#39;t need to make the
+  raw Markdown line up prettily. You can also use inline Markdown.
+  
+  Markdown | Less | Pretty
+  --- | --- | ---
+  *Still* | `renders` | **nicely**
+  1 | 2 | 3
+  
+  | First Header  | Second Header |
+  | ------------- | ------------- |
+  | Content Cell  | Content Cell  |
+  | Content Cell  | Content Cell  |
+  
+  | Command | Description |
+  | --- | --- |
+  | git status | List all new or modified files |
+  | git diff | Show file differences that haven&#39;t been staged |
+  
+  | Command | Description |
+  | --- | --- |
+  | `git status` | List all *new or modified* files |
+  | `git diff` | Show file differences that **haven&#39;t been** staged |
+  
+  | Left-aligned | Center-aligned | Right-aligned |
+  | :---         |     :---:      |          ---: |
+  | git status   | git status     | git status    |
+  | git diff     | git diff       | git diff      |
+  
+  | Name     | Character |
+  | ---      | ---       |
+  | Backtick | `         |
+  | Pipe     | \|        |
+  </code></pre>
+        <p>Colons can be used to align columns.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Tables</th>
+              <th style="text-align:center">Are</th>
+              <th style="text-align:right">Cool</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>col 3 is</td>
+              <td style="text-align:center">right-aligned</td>
+              <td style="text-align:right">$1600</td>
+            </tr>
+            <tr>
+              <td>col 2 is</td>
+              <td style="text-align:center">centered</td>
+              <td style="text-align:right">$12</td>
+            </tr>
+            <tr>
+              <td>zebra stripes</td>
+              <td style="text-align:center">are neat</td>
+              <td style="text-align:right">$1</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>There must be at least 3 dashes separating each header cell.
+          The outer pipes (|) are optional, and you don&rsquo;t need to make the
+          raw Markdown line up prettily. You can also use inline Markdown.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Markdown</th>
+              <th>Less</th>
+              <th>Pretty</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><em>Still</em></td>
+              <td><code>renders</code></td>
+              <td><strong>nicely</strong></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <thead>
+            <tr>
+              <th>First Header</th>
+              <th>Second Header</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Content Cell</td>
+              <td>Content Cell</td>
+            </tr>
+            <tr>
+              <td>Content Cell</td>
+              <td>Content Cell</td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <thead>
+            <tr>
+              <th>Command</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>git status</td>
+              <td>List all new or modified files</td>
+            </tr>
+            <tr>
+              <td>git diff</td>
+              <td>Show file differences that haven&rsquo;t been staged</td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <thead>
+            <tr>
+              <th>Command</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>git status</code></td>
+              <td>List all <em>new or modified</em> files</td>
+            </tr>
+            <tr>
+              <td><code>git diff</code></td>
+              <td>Show file differences that <strong>haven&rsquo;t been</strong> staged</td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <thead>
+            <tr>
+              <th style="text-align:left">Left-aligned</th>
+              <th style="text-align:center">Center-aligned</th>
+              <th style="text-align:right">Right-aligned</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="text-align:left">git status</td>
+              <td style="text-align:center">git status</td>
+              <td style="text-align:right">git status</td>
+            </tr>
+            <tr>
+              <td style="text-align:left">git diff</td>
+              <td style="text-align:center">git diff</td>
+              <td style="text-align:right">git diff</td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Character</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Backtick</td>
+              <td>`</td>
+            </tr>
+            <tr>
+              <td>Pipe</td>
+              <td>|</td>
+            </tr>
+          </tbody>
+        </table>
+        <hr>
+        <h1 id="blockquotes">Blockquotes</h1>
+        <pre tabindex="0"><code>&gt; Blockquotes are very handy in email to emulate reply text.
+  &gt; This line is part of the same quote.
+  
+  Quote break.
+  
+  &gt; This is a very long line that will still be quoted properly when it wraps. Oh boy let&#39;s keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
+  
+  &gt; Blockquotes can also be nested...
+  &gt;&gt; ...by using additional greater-than signs right next to each other...
+  &gt; &gt; &gt; ...or with spaces between arrows.
+  </code></pre>
+        <blockquote>
+          <p>Blockquotes are very handy in email to emulate reply text.
+            This line is part of the same quote.</p>
+        </blockquote>
+        <p>Quote break.</p>
+        <blockquote>
+          <p>This is a very long line that will still be quoted properly when it wraps. Oh boy let&rsquo;s keep writing
+            to make sure this is long enough to actually wrap for everyone. Oh, you can <em>put</em>
+            <strong>Markdown</strong> into a blockquote.
+          </p>
+        </blockquote>
+        <blockquote>
+          <p>Blockquotes can also be nested&hellip;</p>
+          <blockquote>
+            <p>&hellip;by using additional greater-than signs right next to each other&hellip;</p>
+            <blockquote>
+              <p>&hellip;or with spaces between arrows.</p>
+            </blockquote>
+          </blockquote>
+        </blockquote>
+        <hr>
+        <h1 id="inline-html">Inline HTML</h1>
+        <pre tabindex="0"><code>&lt;dl&gt;
+    &lt;dt&gt;Definition list&lt;/dt&gt;
+    &lt;dd&gt;Is something people use sometimes.&lt;/dd&gt;
+  
+    &lt;dt&gt;Markdown in HTML&lt;/dt&gt;
+    &lt;dd&gt;Does *not* work **very** well. Use HTML &lt;em&gt;tags&lt;/em&gt;.&lt;/dd&gt;
+  &lt;/dl&gt;
+  </code></pre><!-- raw HTML omitted -->
+        <!-- raw HTML omitted -->
+        <hr>
+        <h1 id="horizontal-rules">Horizontal Rules</h1>
+        <pre tabindex="0"><code>Three or more...
+  
+  ---
+  
+  Hyphens
+  
+  ***
+  
+  Asterisks
+  
+  ___
+  
+  Underscores
+  </code></pre>
+        <p>Three or more&hellip;</p>
+        <hr>
+        <p>Hyphens</p>
+        <hr>
+        <p>Asterisks</p>
+        <hr>
+        <p>Underscores</p>
+        <hr>
+        <h1 id="youtube-videos">YouTube Videos</h1>
+        <pre tabindex="0"><code>&lt;a href=&#34;http://www.youtube.com/watch?feature=player_embedded&amp;v=YOUTUBE_VIDEO_ID_HERE&#34; target=&#34;_blank&#34;&gt;
+  &lt;img src=&#34;http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg&#34; alt=&#34;IMAGE ALT TEXT HERE&#34; width=&#34;240&#34; height=&#34;180&#34; border=&#34;10&#34;&gt;
+  &lt;/a&gt;
+  </code></pre><!-- raw HTML omitted -->
+        <pre tabindex="0"><code>[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+  </code></pre>
+        <p><a href="https://www.youtube.com/watch?v=ciawICBvQoE">
+            <figure class="flex flex-col justify-between">
+              <figcaption>IMAGE ALT TEXT HERE</figcaption>
+              <img class="object-center"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/YouTube_logo_2015.svg/1200px-YouTube_logo_2015.svg.png"
+                alt="IMAGE ALT TEXT HERE">
+            </figure>
+          </a></p>
+        <div class="footnotes" role="doc-endnotes">
+          <hr>
+          <ol>
+            <li id="fn:1">
+              <p>Footnote <strong>can have markup</strong></p>
+              <p>and multiple paragraphs.&#160;<a href="#fnref:1" class="footnote-backref"
+                  role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+            </li>
+            <li id="fn:2">
+              <p>Footnote text.&#160;<a href="#fnref:2" class="footnote-backref"
+                  role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:2" class="footnote-backref"
+                  role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+            </li>
+          </ol>
+        </div>
+      </main>
     </article>
-  </main>
-  <footer>
-    <div>
-      <p>&copy; 2024 Christian Funkhouser. All rights reserved.</p>
-    </div>
+    <footer>
+      <div>
+        <p>&copy; 2024 Christian Funkhouser. All rights reserved.</p>
+      </div>
 
-  </footer>
+    </footer>
 </body>
 
 </html>

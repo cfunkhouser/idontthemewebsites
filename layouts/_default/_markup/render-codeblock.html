@@ -1,0 +1,7 @@
+{{ $code := transform.HighlightCodeBlock . -}}
+<figure>
+  {{ $code.Wrapped }}
+  {{ if .Attributes.caption -}}
+  <figcaption>{{ .Attributes.caption | markdownify }}</figcaption>
+  {{ end -}}
+</figure>
