@@ -3,12 +3,12 @@
 <head>
   {{ partial "head.html" . }}
 </head>
-<body class="landing">
-  <main>
-    <header>
+<body>
+  <main class="flex flex-col h-screen">
+    <header class="flex flex-col m-auto">
       <p>{{ .Site.Params.Slug | .RenderString }}</p>
-      <h1>{{ .Site.Title }}</h1>
-      <nav>
+      <h1 class="text-3xl font-medium trailing-period">{{ .Site.Title }}</h1>
+      <nav class="flex flex-row pt-8">
         <p>I do</p>
         <ul>
         {{- range .Site.Menus.main.ByWeight }}

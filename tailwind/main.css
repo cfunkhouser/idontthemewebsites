@@ -4,7 +4,19 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+@layer utilities {
+  .trailing-period:after {
+    content: '.';
+  }
+}
+
 @layer base {
+  .single p {
+    @apply text-red-500 leading-loose mb-4 indent-4 tracking-wide;
+  }
+
   a {
     @apply font-medium;
   }
@@ -50,16 +62,6 @@
     @apply antialiased bg-white dark:bg-gray-800 dark:text-white flex flex-col font-serif h-screen justify-between text-gray-700;
   }
 
-  /*** Subtitle ***/
-  header>p {
-    @apply text-gray-500 dark:text-gray-300;
-  }
-
-  article main p,
-  article section p {
-    @apply indent-4 leading-loose mb-4 tracking-wide;
-  }
-
   article>header {
     @apply pb-6;
   }
@@ -91,10 +93,6 @@
 
   body>header {
     @apply flex justify-between items-center max-w-3xl mx-auto py-4;
-  }
-
-  body>header>h1 {
-    @apply after:content-['.'];
   }
 
   body>main {
@@ -144,39 +142,5 @@
   nav>ol>li:nth-last-child(1):after,
   nav>ul>li:nth-last-child(1):after {
     content: '.';
-  }
-
-  /*** Landing Page ***/
-  .landing main {
-    @apply flex flex-col h-screen;
-  }
-
-  .landing main>* {
-    @apply flex flex-col m-auto;
-  }
-
-  .landing header h1 {
-    @apply text-3xl font-medium text-gray-800 dark:text-white;
-  }
-
-  .landing header h1:after {
-    content: '.';
-  }
-
-  .landing header nav {
-    @apply flex flex-row pt-8;
-  }
-
-  /*** List Page ***/
-  main .list>article {
-    @apply pb-4 mb-8;
-  }
-
-  main .list>article:not(:nth-last-child(1)) {
-    @apply border-b;
-  }
-
-  main .list article>section {
-    @apply line-clamp-2;
   }
 }

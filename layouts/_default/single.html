@@ -1,14 +1,17 @@
 {{- define "main" }}
-  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-  {{ $dateHuman := .Date | time.Format ":date_long" }}
-  <article class="prose prose-sm">
-    <header class="border-b border-gray-200">
-      <h1>{{ .Title }}</h1>
-      <p>
-        It was written <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>.
+  <article class="border-b border-gray-200 pb-8">
+    <header>
+      <h1 class="text-3xl">{{ .Title }}</h1>
+      <p class="text-gray-500 dark:text-gray-300">
+      {{- if .Page.Param "subtitle" }}
+        {{ .Page.Param "subtitle" | plainify }}
+      {{ end -}}
+      {{- if .Date }}
+        It was written <time datetime="{{ .Date | time.Format "2006-01-02T15:04:05-07:00" }}">{{ .Date | time.Format ":date_long" }}</time>.
+      {{ end -}}
       </p>
     </header>
-    <main  class="prose">
+    <main class="leading-loose mb-4 tracking-wide [&_p]:indent-4 [&_p]:pb-2">
       {{ .Content }}
     </main>
     <aside>

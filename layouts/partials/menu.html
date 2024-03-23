@@ -8,8 +8,7 @@ Renders a menu for the given menu ID.
 */}}
 
 {{- $page := .page }}
-{{- $menuID := .menuID }}
-
+{{- $menuID := .menuID -}}
 <nav>
   <p>I do</p>
   <ul>
@@ -17,4 +16,5 @@ Renders a menu for the given menu ID.
     <li><a href="{{ .URL }}">{{ .Name }}</a></li>
   {{- end }}
   </ul>
+  <p class="text-light">I also wrote this.</p>
 </nav>

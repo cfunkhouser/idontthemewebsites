@@ -494,26 +494,6 @@ body:where(.dark, .dark *){
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-/*** Subtitle ***/
-
-header>p{
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-
-header>p:where(.dark, .dark *){
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
-}
-
-article main p,
-  article section p{
-  margin-bottom: 1rem;
-  text-indent: 1rem;
-  line-height: 2;
-  letter-spacing: 0.025em;
-}
-
 article>header{
   padding-bottom: 1.5rem;
 }
@@ -653,11 +633,6 @@ body>header{
   justify-content: space-between;
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-body>header>h1::after{
-  --tw-content: '.';
-  content: var(--tw-content);
 }
 
 body>main{
@@ -811,61 +786,6 @@ nav>ol>li:nth-last-child(1):after,
     content: '.';
   }
 
-/*** Landing Page ***/
-
-.landing main{
-  display: flex;
-  height: 100vh;
-  flex-direction: column;
-}
-
-.landing main>*{
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.landing header h1{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: 500;
-  --tw-text-opacity: 1;
-  color: rgb(31 41 55 / var(--tw-text-opacity));
-}
-
-.landing header h1:where(.dark, .dark *){
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.landing header h1:after {
-    content: '.';
-  }
-
-.landing header nav{
-  display: flex;
-  flex-direction: row;
-  padding-top: 2rem;
-}
-
-/*** List Page ***/
-
-main .list>article{
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-}
-
-main .list>article:not(:nth-last-child(1)){
-  border-bottom-width: 1px;
-}
-
-main .list article>section{
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-}
-
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -971,6 +891,13 @@ main .list article>section{
 .relative{
   position: relative;
 }
+.m-auto{
+  margin: auto;
+}
+.my-8{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 .block{
   display: block;
 }
@@ -983,19 +910,116 @@ main .list article>section{
 .table{
   display: table;
 }
+.h-screen{
+  height: 100vh;
+}
+.w-full{
+  width: 100%;
+}
+.flex-row{
+  flex-direction: row;
+}
 .flex-col{
   flex-direction: column;
 }
 .justify-between{
   justify-content: space-between;
 }
+.justify-items-stretch{
+  justify-items: stretch;
+}
 .border{
   border-width: 1px;
+}
+.border-b{
+  border-bottom-width: 1px;
+}
+.border-t{
+  border-top-width: 1px;
+}
+.border-gray-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity));
+}
+.border-t-blue-400{
+  --tw-border-opacity: 1;
+  border-top-color: rgb(96 165 250 / var(--tw-border-opacity));
+}
+.border-t-green-400{
+  --tw-border-opacity: 1;
+  border-top-color: rgb(74 222 128 / var(--tw-border-opacity));
+}
+.border-t-red-400{
+  --tw-border-opacity: 1;
+  border-top-color: rgb(248 113 113 / var(--tw-border-opacity));
+}
+.bg-gray-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 .object-center{
   -o-object-position: center;
      object-position: center;
 }
+.pb-8{
+  padding-bottom: 2rem;
+}
+.pt-8{
+  padding-top: 2rem;
+}
+.text-center{
+  text-align: center;
+}
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.font-medium{
+  font-weight: 500;
+}
 .italic{
   font-style: italic;
+}
+.leading-loose{
+  line-height: 2;
+}
+.tracking-wide{
+  letter-spacing: 0.025em;
+}
+.text-gray-500{
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.trailing-period:after {
+    content: '.';
+  }
+.hover\:bg-blue-400:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(96 165 250 / var(--tw-bg-opacity));
+}
+.hover\:bg-green-400:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
+}
+.hover\:bg-red-400:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+}
+.dark\:text-gray-300:where(.dark, .dark *){
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+.\[\&_p\]\:pb-2 p{
+  padding-bottom: 0.5rem;
+}
+.\[\&_p\]\:indent-4 p{
+  text-indent: 1rem;
 }
