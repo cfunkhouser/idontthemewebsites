@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,34 +13,55 @@
     @apply underline;
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-medium my-2 text-gray-700 dark:text-gray-200;
+  }
+
+  h1 {
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+
+  h3 {
+    @apply text-xl;
+  }
+
+  h4 {
+    @apply text-lg;
+  }
+
+  h5 {
+    @apply text-lg text-gray-600 dark:text-gray-300;
+  }
+
+  h6 {
+    @apply text-gray-600 dark:text-gray-300;
+  }
+
   body {
     @apply antialiased bg-white dark:bg-gray-800 dark:text-white flex flex-col font-serif h-screen justify-between text-gray-700;
   }
 
-  header {
-    @apply mb-4;
-  }
-
-  header h1,
-  header h2,
-  header h3,
-  header h4,
-  header h5,
-  header h6 {
-    @apply font-medium text-xl;
-  }
-
   /*** Subtitle ***/
-  header p {
+  header>p {
     @apply text-gray-500 dark:text-gray-300;
   }
 
-  article section {
-    @apply indent-6 leading-loose tracking-wide;
+  article main p,
+  article section p {
+    @apply indent-4 leading-loose mb-4 tracking-wide;
   }
 
-  article section>* {
-    @apply pb-2;
+  article>header {
+    @apply pb-6;
   }
 
   figure {
@@ -49,8 +72,8 @@
     @apply border-b text-sm text-center dark:border-gray-700 border-gray-200 mb-2;
   }
 
-  figure img {
-    @apply rounded-md;
+  figure code {
+    @apply overflow-auto;
   }
 
   figure>*:last-child {
@@ -61,12 +84,17 @@
     @apply px-2 block whitespace-pre font-mono text-sm sm:text-base rounded-md bg-black dark:text-white text-white;
   }
 
+  article>header,
   body>header {
-    @apply border-b border-gray-200 container dark:border-gray-700 flex justify-between items-center max-w-3xl mx-auto py-4;
+    @apply border-b border-gray-200 container dark:border-gray-700;
+  }
+
+  body>header {
+    @apply flex justify-between items-center max-w-3xl mx-auto py-4;
   }
 
   body>header>h1 {
-    @apply font-medium text-2xl text-gray-800 dark:text-white after:content-['.'];
+    @apply after:content-['.'];
   }
 
   body>main {

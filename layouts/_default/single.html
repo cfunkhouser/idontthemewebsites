@@ -1,14 +1,14 @@
 {{- define "main" }}
   {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
   {{ $dateHuman := .Date | time.Format ":date_long" }}
-  <article>
-    <header class="border-b">
-      <h2>{{ .Title }}</h2>
+  <article class="prose prose-sm">
+    <header class="border-b border-gray-200">
+      <h1>{{ .Title }}</h1>
       <p>
         It was written <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>.
       </p>
     </header>
-    <main class="prose">
+    <main  class="prose">
       {{ .Content }}
     </main>
     <aside>

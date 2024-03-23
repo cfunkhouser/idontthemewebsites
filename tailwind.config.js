@@ -9,12 +9,11 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Roboto', ...DEFAULT_THEME.fontFamily.sans],
-        serif: ['Roboto Slab', ...DEFAULT_THEME.fontFamily.serif],
-        mono: ['Roboto Mono', ...DEFAULT_THEME.fontFamily.mono]
+        serif: ['"Roboto Slab"', ...DEFAULT_THEME.fontFamily.serif],
+        mono: ['"Roboto Mono"', ...DEFAULT_THEME.fontFamily.mono]
       },
     },
   },
   plugins: [
-    require('@tailwindcss/typography'),
   ],
 }
